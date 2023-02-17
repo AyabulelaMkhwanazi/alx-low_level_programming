@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 /**
- *Description: Print alphabet in lowercase and
- *then in uppercase followed by new line
+ *Description: Get alphabet in lowercase and
+ *uppercase then print followed by new line
  *
  * Main: Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	char c = 'a';
