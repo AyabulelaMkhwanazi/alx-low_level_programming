@@ -3,10 +3,12 @@
 #include <stdio.h>
 
 /**
- * Main - Main block
- * description - get a random number and print the number
+ * main - Entry point
+ *
+ * Description: Get a random number and print the number
  * and if it is positive, negative, or zero
- * Return = 0
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
