@@ -5,7 +5,8 @@
 /**
  * main - Entry point
  *
- * Description: Assign a random number to n, check its last digit and compare it to 5
+ * Description: Get a random number to n, 
+ * check its last digit and compare it to 5
  *
  * Return: Always 0 (Success)
  */
