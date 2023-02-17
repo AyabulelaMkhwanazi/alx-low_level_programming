@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main: Entry point
- *
  *Description: Print alphabet in lowercase and
  *then in uppercase followed by new line
+ *
+ * Main: Entry point
  *
  * Return: Always 0 (Success)
  */
