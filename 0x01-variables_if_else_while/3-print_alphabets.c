@@ -3,7 +3,7 @@
 /**
  * main: Entry point
  *
- *description: Print alphabet in lowercase and
+ *Description: Print alphabet in lowercase and
  *then in uppercase followed by new line
  *
  * Return: Always 0 (Success)
@@ -13,12 +13,12 @@ int main(void)
 	char c = 'a';
 	char d = 'A';
 
-	while(c <= 'z')
+	while (c <= 'z')
 	{
 		putchar(c);
 		c++;
 	}
-	while(d <= 'Z')
+	while (d <= 'Z')
 	{
 		putchar(d);
 		d++;
