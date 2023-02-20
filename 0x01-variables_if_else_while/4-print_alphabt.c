@@ -1,12 +1,9 @@
 #include <stdio.h>
 
 /**
- * main: Entry point
- *
- * description: Print alphabet in lowercase, followed by new
- * line except q and e
- *
- * Return: Always 0 (Success)
+ * main - Entry point
+ * Description - This program prints alphabet ina new line except q and e
+ * Return - 0 if errors occur return 1
  */
 
 int main(void)
