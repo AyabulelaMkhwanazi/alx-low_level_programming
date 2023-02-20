@@ -1,17 +1,14 @@
 #include <stdio.h>
 
 /**
- * main: Entry point
- *
- * Return : Always 0 (Success)
- *
- * Print base 10 numbers starting from 0
- * followed by new line
+ * main - Entry point
+ * Description - This program prints base 10 numbers starting from 0
+ * Return - 0 (Success)
  */
 
 int main(void)
 {
-	int i;
+	int i = 0;
 
 	for (i = 0; i <= 9; i++)
 	{
