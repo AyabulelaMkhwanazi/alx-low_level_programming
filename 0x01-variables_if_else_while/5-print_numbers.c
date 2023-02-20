@@ -11,13 +11,10 @@
 
 int main(void)
 {
-	char c = 0;
+	int i;
 
-	while (c <= 9)
-	{
-		putchar(c);
-		c++;
-	}
+	for(i = 0; i <= 10; i++)
+		putchar(i);
 	putchar('\n');
 	return (0);
 }
