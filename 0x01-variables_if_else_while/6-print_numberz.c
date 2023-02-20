@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- * main: Print base 10 digits , function int
- * use putchar twice
- *
+ * main - main function
+ * description - This program prints base 10 numbers starting  from 0
  * Return: Always 0 (Success)
- *
  */
 
 int main(void)
