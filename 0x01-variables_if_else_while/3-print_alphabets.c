@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- * main: Entry point
- * Description - This program prints alphabets in lowercase
+ * main - Entry point
+ *
+ * Description - This program prints the alphabet in lowercase and uppercase
+ *
  * Return: 0 (Success)
  */
 
