@@ -2,11 +2,8 @@
 
 /**
  * main: Entry point
- *
- * description: Print alphabets in lowercase and
- * uppercase followed by new line.
- *
- * Return: Always 0 (Success)
+ * Description - This program prints alphabets in lowercase
+ * Return: 0 (Success)
  */
 
 int main(void)
