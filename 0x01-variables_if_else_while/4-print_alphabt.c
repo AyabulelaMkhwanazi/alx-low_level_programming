@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  * Description - This program prints alphabet ina new line except q and e
- * Return - 0 if errors occur return 1
+ * Return: 0 if (success)
  */
 
 int main(void)
