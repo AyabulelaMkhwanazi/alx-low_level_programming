@@ -3,7 +3,7 @@
 /**
  * main - main function
  * description - This program prints base 10 numbers starting  from 0
- * Return: Always 0 (Success)
+ * Return: 0 (Success)
  */
 
 int main(void)
