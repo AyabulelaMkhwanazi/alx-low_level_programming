@@ -13,6 +13,6 @@ int print_last_digit(int n)
 	if (d < 0)
 		d = -1;
 	_putchar(d + '0');
-	return (d);
+	return (0);
 
 }
