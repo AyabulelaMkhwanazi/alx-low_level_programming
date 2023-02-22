@@ -3,27 +3,43 @@
 /**
  * jack_bauer - This function prints every minute of the day
  */
-
 void jack_bauer(void)
 {
-	int minute;
-
-	int hour = 0;
-
-	while (hour <= 23)
+	int hour1;
+	int hour2;
+	int minute1;
+	int minute2;
+	int c;
+	
+	hour2 = 0;
+	while (hour2 <= 2)
 	{
-		minute = 0;
-
-		while (minute <= 59)
+		if (hour2 == 2)
 		{
-			_putchar((hour / 10) + '0');
-			_putchar((hour % 10) + '0');
-			_putchar(':');
-			_putchar((minute / 10) + '0');
-			_putchar((minute % 10) + '0');
-			_putchar('\n');
+			c = 3;
 		}
-		minute++;
+		
+		hour1 = 0;
+		while (hour1 <= c)
+		{
+			minute2 = 0;
+			while (minute2 <= 5)
+			{
+				minute1 = 0;
+				while (minute1 <= 9)
+				{
+					_putchar('0' + hour2);
+					_putchar('0' + hour1);
+					_putchar(':');
+					_putchar('0' + minute2);
+					_putchar('0' + minute1);
+					_putchar('\n');
+					minute1++;
+				}
+				minute2++;
+			}
+			hour1++;
+		}
+		hour2++;
 	}
-	hour++;
 }
