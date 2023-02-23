@@ -6,18 +6,15 @@
 
 void print_square(int size)
 {
-	int s,sq;
-	size = 2;
+	int s, b;
 
 	if (size <= 0)
-	{
 		_putchar('\n');
-	}
 	else
 	{
 		for (s = 0; s < size; s++)
 		{
-			for (sq = 0; sq < size; sq++)
+			for (b = 0; b < size; b++)
 			{
 				_putchar(35);
 			}
