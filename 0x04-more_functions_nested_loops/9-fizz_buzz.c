@@ -14,9 +14,7 @@ int main(void)
 
 	while (a <= 100)
 	{
-		if (a == 100)
-			printf("Buzz ");
-		else if (a % 3 == 0 && a % 5 == 0)
+		if (a % 3 == 0 && a % 5 == 0)
 			printf("FizzBuzz ");
 		else if (a % 3 == 0)
 			printf("Fizz ");
