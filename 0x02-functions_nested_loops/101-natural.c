@@ -4,7 +4,7 @@
 
 /**
  * main - entry point
- * Desccription - computes and prints sum of all multiples of 10 or 5 below 1024
+ * Desccription - prints sum of all multiples of 10 or 5 below 1024
  * Return: 0
  */
 
