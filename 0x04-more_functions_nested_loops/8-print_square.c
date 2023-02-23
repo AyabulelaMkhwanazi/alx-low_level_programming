@@ -2,6 +2,7 @@
 
 /**
  * print_square - Prints squares
+ * @size: size of the square
  */
 
 void print_square(int size)
