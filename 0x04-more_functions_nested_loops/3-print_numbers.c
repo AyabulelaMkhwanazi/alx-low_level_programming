@@ -1,8 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_numbers - Prints numbers from 0 to 9
- * Return: result
  */
 
 void print_numbers(void)
@@ -12,8 +12,8 @@ void print_numbers(void)
 
 	while (a <= 9)
 	{
-		_putchar(a + '0');
-	}
-	_putchar('\n');
+		putchar(a);
+	}	
+	putchar('\n');
 	a++;
 }
