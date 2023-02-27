@@ -3,16 +3,17 @@
 /**
  * _strlen - returns length of a string
  * @s: pointer to print string length
+ * Return: count
  */
 
-int _strlen(char *c)
+int _strlen(char *s)
 {
 	int count = 0;
 
-	while (*c != '\0')
+	while (*s != '\0')
 	{
 		count++;
-		c++;
+		s++;
 	}
 	return (count);
 }
