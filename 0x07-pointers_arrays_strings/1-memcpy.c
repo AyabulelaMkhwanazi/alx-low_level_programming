@@ -2,8 +2,9 @@
 
 /**
  * _memcpy - function that copies memory area
+ * Description - Copies n bytes from memory area src to dest
  * @dest: pointer to the destination array
- * @str: pointer to the source array
+ * @src: pointer to the source array
  * @n: the number of bytes to be copied from source to destination
  * Return: dest
  */
