@@ -4,9 +4,8 @@
 int _sqrt(int n, int i);
 
 /**
- * _sqrt - function returns the natural square root of a number
- * @n: represents a number
- * @i: number to iterate
+ * _sqrt_recursion - Returns the natural square root of a number
+ * @n: represents a number calculate square root
  * Return: natural square root
  */
 
@@ -16,8 +15,9 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * _sqrt_recursion - function returns the natural square root of a number
- * @n: represents a number
+ * _sqrt - Calculate natural square root
+ * @n: represents a number to calculate square root
+ * @i: iterate through number
  * Return: natural square root
  */
 
