@@ -5,32 +5,35 @@
  * main - Entry point
  * @argc: argument count
  * @argv: argument vector
- * Description - program multiples two numbers
+ *
+ * Desciption - program adds positive numbers
  * Return: 0 (success)
  */
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int mul;
-	int num;
-	int num2;
+	int i,j;
+	int sum = 0;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			num = atoi(argv[1]);
-			num2 = atoi(argv[2]);
-			mul = num * num2;
+			sum += atoi(argv[i]);
 		}
-		printf("%d\n", mul);
+		printf("%d\n", sum);
 	}
-	else if (argc != 3)
+	else
 	{
-		printf("%s\n","Error");
-		return (1);
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			printf("Error\n");
+			return (1);
+		}
+	}
+	if (argc < 0)
+	{
+		printf("0\n");
 	}
 	return (0);
 }
-
