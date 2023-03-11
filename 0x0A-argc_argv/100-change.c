@@ -5,7 +5,8 @@
  * main - Entry point
  * @argc: argument counter
  * @argv: argument vector
- * Description - 
+ * Description - program prints the minimum number of coins to make change
+ * for an amount of money
  * Return: 0 (success)
  */
 
@@ -15,12 +16,10 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("%s\n","Error");
+		printf("%s\n", "Error");
 		return (1);
 	}
-
 	cents = atoi(argv[1]);
-
 	while (cents > 0)
 	{
 		coins++;
