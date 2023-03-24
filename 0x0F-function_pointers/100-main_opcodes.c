@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (bytes < 0)
 	{
-		printf("Erro\n");
+		printf("Error\n");
 		exit(2);
 	}
 
