@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_list - function prints all the elements of a list_t list
- * @list_t: list
- * @h: pointer
+ * print_list - function prints all the elements of a linked list
+ *
+ * @h: pointer to the list_t list
  * Return: list
  */
 
