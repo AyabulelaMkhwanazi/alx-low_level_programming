@@ -7,6 +7,7 @@
  * a linked list
  * @head: pointer to the linked list
  * @n: integer
+ * Return: new node
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
