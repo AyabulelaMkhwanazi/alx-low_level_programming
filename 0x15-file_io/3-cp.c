@@ -49,11 +49,9 @@ int main(int argc, char *argv[])
 			free(b);
 			exit(98);
 		}
-		else
-		{
-			r = read(file_from, b, 1024);
-			file_to = open(argv[2], O_WRONLY | O_APPEND);
-		}
+
+		r = read(file_from, b, 1024);
+		file_to = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	free(b);
 	close_file(file_from);
