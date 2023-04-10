@@ -74,9 +74,9 @@ char *_buffer(char *file)
 
 	buffer = malloc(sizeof(char) * 1024);
 
-	if (file == NULL)
+	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file);
 		exit(99);
 	}
 	return (buffer);
