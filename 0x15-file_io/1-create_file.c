@@ -11,9 +11,9 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	int s = 0;
-	int b;
+	int fd; /* holds the open file system call */
+	int s = 0; /* to iterate through the text_content string */
+	int b; /* holds the write file system call */
 
 	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, (00600));
 
