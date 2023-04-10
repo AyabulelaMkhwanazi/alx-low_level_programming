@@ -30,10 +30,9 @@ int main(int argc, char *argv[])
 	b = _buffer(argv[2]);
 	file_from = open(argv[1], O_RDONLY);
 	r = read(file_from, b, 1024);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 00664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	while (r > 0)
-	{
+	do {
 		if (file_from == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -52,7 +51,8 @@ int main(int argc, char *argv[])
 
 		r = read(file_from, b, 1024);
 		file_to = open(argv[2], O_WRONLY | O_APPEND);
-	}
+	} while (r > 0);
+
 	free(b);
 	close_file(file_from);
 	close_file(file_to);
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
  * _buffer - allocates 1024 bytes to buffer
  * Description: function allocates memory to buffer
  * @file: file to allocate bytes to
- * Return: _buffer
+ * Return: buffer
  */
 
 char *_buffer(char *file)
