@@ -16,10 +16,10 @@ void close_file(int fd);
 
 int main(int argc, char *argv[])
 {
-	int file_from, file_to; /* open system calls for 2 files) */
-	int r; /* read system call */
-	int w; /* write system call */
-	char *b; /* holds the buffer size */
+	int file_from, file_to;
+	int r;
+	int w;
+	char *b;
 
 	if (argc != 3)
 	{
@@ -30,13 +30,13 @@ int main(int argc, char *argv[])
 	b = _buffer(argv[2]);
 	file_from = open(argv[1], O_RDONLY);
 	r = read(file_from, b, 1024);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, (00664));
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 00664);
 
 	while (r > 0)
 	{
 		if (file_from == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO, "Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(b);
 			exit(98);
 		}
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(b);
-			exit(98);
+			exit(99);
 		}
 
 		r = read(file_from, b, 1024);
