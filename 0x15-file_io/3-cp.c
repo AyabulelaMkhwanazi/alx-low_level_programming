@@ -7,6 +7,41 @@ char *_buffer(char *file); /* function to create buffer */
 void close_file(int fd); /* function to close a file */
 
 /**
+ * _buffer - allocates 1024 bytes to buffer
+ * @file: file to allocate bytes to
+ * Return: _buffer
+ */
+
+char *_buffer(char *file)
+{
+	char *buffer;
+
+	buffer = malloc(sizeof(char) * 1024);
+
+	if (file == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
+		exit(99);
+	}
+	return (buffer);
+}
+
+/**
+ * close_file - function closes a file descriptor
+ * @fd: the file descriptor to close
+ */
+
+void close_file(int fd)
+{
+
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+
+/**
  * main - program copies the content of a file to another file
  * (cp file_from file_to)
  * @argc: number of arguments supplied
@@ -61,37 +96,3 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
-/**
- * _buffer - allocates 1024 bytes to buffer
- * @file: file to allocate bytes to
- * Return: _buffer
- */
-
-char *_buffer(char *file)
-{
-	char *buffer;
-
-	buffer = malloc(sizeof(char) * 1024);
-
-	if (file == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
-		exit(99);
-	}
-	return (buffer);
-}
-
-/**
- * close_file - function closes a file descriptor
- * @fd: the file descriptor to close
- */
-
-void close_file(int fd)
-{
-
-	if (close(fd) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
-}
