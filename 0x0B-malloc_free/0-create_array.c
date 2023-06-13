@@ -28,8 +28,8 @@ char *create_array(unsigned int size, char c)
 	}
 	while (i < size)
 	{
-		i++;
 		str[i] = c;
+		i++;
 	}
 	return (str);
 }
