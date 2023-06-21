@@ -56,10 +56,10 @@ char *_strcpy(char *dest, char *src)
  * @owner: owner of the dog
  *
  * Return: pointer to the new dog (Success), NULL otherwise
- */	
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;	
+	dog_t *dog;
 	int len1, len2;
 
 	len1 = _strlen(name);
