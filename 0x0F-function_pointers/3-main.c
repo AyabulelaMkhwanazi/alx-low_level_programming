@@ -9,7 +9,7 @@
  *
  * Return: Always 0.
  */
-int main(int argc, char *argv[])
+int main(int__attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2;
 	char *operator;
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((*operator == '/' && num2 == '0') || (*operator == '%' && num2 == '0'))
+	if ((*operator == '/' && num2 == 0) || (*operator == '%' && num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
