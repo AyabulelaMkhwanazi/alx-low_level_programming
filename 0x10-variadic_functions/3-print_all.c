@@ -38,11 +38,14 @@ void print_all(const char * const format, ...)
 				else
 					printf("%s%s", sep, s);
 				break;
+			default:
+				i++;
+				continue;
 		}
 		sep = ", ";
 		i++;
 	}
-	va_end(args);
 	printf("\n");
+	va_end(args);
 }
 
