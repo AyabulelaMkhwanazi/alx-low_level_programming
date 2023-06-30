@@ -8,7 +8,8 @@
  *
  * Return: address of the new element, or NULL if failed
  */
-list_t *add_node_node(list_t **head, const char *str)
+
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
 	list_t *tmp = *head;
@@ -37,7 +38,7 @@ list_t *add_node_node(list_t **head, const char *str)
 	}
 	while (tmp->next)
 	{
-		tmp = tmp->next
+		tmp = tmp->next;
 	}
 	tmp->next = new;
 
