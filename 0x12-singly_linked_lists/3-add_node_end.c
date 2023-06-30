@@ -40,4 +40,6 @@ list_t *add_node_node(list_t **head, const char *str)
 		tmp = tmp->next
 	}
 	tmp->next = new;
+
+	return (new);
 }
