@@ -2,7 +2,8 @@
 
 ## Mandatory Tasks
 
-### **0. It ain't what they call you, it's what you answer to**<br />
+### **0. It ain't what they call you, it's what you answer to**
+
 Write a program that prints its name, followed by a new line.
 
 * If you rename the program, it will print the new name, without having to compile it again
@@ -10,14 +11,16 @@ Write a program that prints its name, followed by a new line.
 
 * File: `0-whatsmyname.c`
 
-### **1. Silence is argument carried out by other means**<br />
+### **1. Silence is argument carried out by other means**
+
 Write a program the prints the number of arguments passed into it.
 
 * Your program should print a number, followed by a new line
 
 * File: `1-args.c`
 
-### **2. The best argument against democracy is a five-minute conversation with the average voter**<br />
+### **The best argument against democracy is a five-minute conversation with the average voter**
+
 Write a program that prints all arguments it receives.
 
 * All arguments should be printed, including the first one
@@ -25,7 +28,8 @@ Write a program that prints all arguments it receives.
 
 * File: `2-args.c`
 
-### **3. Neither irony nor sarcasm is argument**<br />
+### **3. Neither irony nor sarcasm is argument**
+
 Write a program that multiplies two numbers.
 
 * Your program should print the result of the multiplication, followed by a new line
@@ -34,7 +38,8 @@ Write a program that multiplies two numbers.
 
 * File: `3-mul.c`
 
-### **4. To infinity and beyond**<br />
+### **4. To infinity and beyond**
+
 Write a program that adds positive numbers.
 
 * Print the result, followed by a new line
@@ -46,7 +51,8 @@ Write a program that adds positive numbers.
 
 ## _Advanced Task_
 
-### **5. Minimal Number of Coins for Change**<br />
+### **5. Minimal Number of Coins for Change**
+
 Write a program that prints the minimum number of coins to make change for an amount of money.
 
 * Usage: `./change cents`
