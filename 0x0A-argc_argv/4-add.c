@@ -4,7 +4,7 @@
 /**
  * main - entry point
  *
- * Description: Program multiplies two numbers
+ * Describe: Program adds positive numbers
  *
  * @argc: argument count (number of arguments passed into the program)
  * @argv: argument vector (array of arguments passed into the program)
@@ -13,22 +13,24 @@
  */
 int main(int argc, char *argv[])
 {
-	int a;
-	int b;
+	int sum;
+	int i, j;
 
-	int mul;
+	for (i = 1; i < argc; i++)
+	{
+		char *alpha = argv[i];
 
-	if (argc != 3)
-	{
-		printf("Error\n");
-		return (1);
+		for (j = 0; alpha[j] != '\0'; j++)
+		{
+			if (alpha[j] < '0' || alpha[j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		sum += atoi(alpha);
 	}
-	else
-	{
-		a = atoi(argv[1]);
-		b = atoi(argv[2]);
-		mul = a * b;
-		printf("%d\n", mul);
-	}
+	printf("%d\n", sum);
+
 	return (0);
 }
