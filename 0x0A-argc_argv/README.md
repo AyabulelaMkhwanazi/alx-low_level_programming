@@ -2,10 +2,10 @@
 
 ## _Tasks_
 
-### **:zero:. It ain't what they call you, it's what you answer to**
+### 0. It ain't what they call you, it's what you answer to
 
 > [!NOTE]
-> <sup>MANDATORY TASK</sup> :beginner:
+> **<sup>MANDATORY TASK</sup>** :beginner:
 
 - [x] Write a program that prints its name, followed by a new line.
 
@@ -15,7 +15,7 @@
 
 * :file_folder: : `0-whatsmyname.c`
 
-### **:one:. Silence is argument carried out by other means**
+### 1. Silence is argument carried out by other means
 
 > [!NOTE]
 > <sup>MANDATORY TASK</sup> :beginner:
@@ -26,7 +26,7 @@
 
 * :file_folder: : `1-args.c`
 
-### **:two:. The best argument against democracy is a five-minute conversation with the average voter**
+### 2. The best argument against democracy is a five-minute conversation with the average voter
 
 > [!NOTE]
 > <sup>MANDATORY TASK</sup> :beginner:
@@ -39,7 +39,7 @@
 
 * :file_folder: : `2-args.c`
 
-### **:three:. Neither irony nor sarcasm is argument**
+### 3. Neither irony nor sarcasm is argument
 
 > [!NOTE]
 > <sup>MANDATORY TASK</sup> :beginner:
@@ -53,7 +53,7 @@
 
 * :file_folder: : `3-mul.c`
 
-### **:four:. To infinity and beyond**
+### 4. To infinity and beyond
 
 > [!NOTE]
 > <sup>MANDATORY TASK</sup> :beginner:
@@ -68,10 +68,10 @@
 
 * :file_folder: : `4-add.c`
 
-### **:five:. Minimal Number of Coins for Change**
+### 5. Minimal Number of Coins for Change
 
 > [!NOTE]
-> <sup>ADVANCED TASK</sup> :flames:
+> <sup>ADVANCED TASK</sup> :fire:
 
 - [ ] Write a program that prints the minimum number of coins to make change for an amount of money.
 
