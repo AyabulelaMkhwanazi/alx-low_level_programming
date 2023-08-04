@@ -6,7 +6,7 @@
  * @str: character used to print string
  */
 
-void _puts(char *str)
+void _puts(char *s)
 {
 	while (*str != '\0')
 	{
