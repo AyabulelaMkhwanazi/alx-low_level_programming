@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int _is_digit(char c);
+
 /**
  * main - entry point
  *
@@ -13,24 +15,38 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum;
-	int i, j;
+	int sum = 0;
+	int i;
+	int j = 0;
+	char *args;
 
 	for (i = 1; i < argc; i++)
 	{
-		char *alpha = argv[i];
+		args = argv[i];
 
-		for (j = 0; alpha[j] != '\0'; j++)
+		for (j = 0; args[j] != '\0'; j++)
 		{
-			if (alpha[j] < '0' || alpha[j] > '9')
+			if (!_is_digit(args[j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		sum += atoi(alpha);
+		sum += atoi(args);
 	}
 	printf("%d\n", sum);
 
 	return (0);
+}
+
+/**
+ * _is_digit - checks if the character is a digit
+ *
+ * @c: character to check
+ *
+ * Return: integer
+ */
+int _is_digit(char c)
+{
+	return (c >= '0' && c <= '9');
 }
