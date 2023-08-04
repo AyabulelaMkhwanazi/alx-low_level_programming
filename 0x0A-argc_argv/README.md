@@ -71,7 +71,8 @@
 ### **:five:. Minimal Number of Coins for Change**
 
 > [!NOTE]
-> :a: _advanced task_
+
+> :a: <sub>ADVANCED TASK</sub>
 
 - [ ] Write a program that prints the minimum number of coins to make change for an amount of money.
 
