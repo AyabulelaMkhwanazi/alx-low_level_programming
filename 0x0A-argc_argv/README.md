@@ -2,18 +2,18 @@
 
 ## _Tasks_
 
-| 0. It ain't what they call you, it's what you answer to |
-
- > [!NOTE]
- > <sup>MANDATORY TASK</sup>
-| ----------------------------------------------------------------- |
-|- [x] Write a program that prints its name, followed by a new line. |
-
-> [!IMPORTANT]
-> * If you rename the program, it will print the new name, without having to compile it again
-> * You should not remove the path before the name of the program
-
-| * :file_folder: : `0-whatsmyname.c` |
+|  0. It ain't what they call you, it's what you answer to                                      |
+|                                                                                               |
+ > [!NOTE]                                                                                      |
+ > <sup>MANDATORY TASK</sup>                                                                    |
+| --------------------------------------------------------------------------------------------- |
+|- [x] Write a program that prints its name, followed by a new line.                            |
+|                                                                                               |
+|> [!IMPORTANT]                                                                                 |
+| > * If you rename the program, it will print the new name, without having to compile it again |
+| > * You should not remove the path before the name of the program                             |
+|                                                                                               |
+| * :file_folder: : `0-whatsmyname.c`                                                           |
 
 ### 1. Silence is argument carried out by other means
 
