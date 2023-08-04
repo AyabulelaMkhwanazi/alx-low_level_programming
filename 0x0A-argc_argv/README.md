@@ -4,7 +4,8 @@
 
 ### **:zero:. It ain't what they call you, it's what you answer to**
 
-> [!NOTE] :m: mandatory
+> [!NOTE]
+> :m: mandatory
 
 - [x] Write a program that prints its name, followed by a new line.
 
@@ -16,7 +17,8 @@
 
 ### **:one:. Silence is argument carried out by other means**
 
-> [!NOTE] :m: mandatory
+> [!NOTE]
+> :m: mandatory
 
 - [x] Write a program the prints the number of arguments passed into it.
 
@@ -26,7 +28,8 @@
 
 ### **:two:. The best argument against democracy is a five-minute conversation with the average voter**
 
-> [!NOTE] :m: mandatory
+> [!NOTE]
+> :m: mandatory
 
 - [x] Write a program that prints all arguments it receives.
 
@@ -38,7 +41,8 @@
 
 ### **:three:. Neither irony nor sarcasm is argument**
 
-> [!NOTE] :m: mandatory
+> [!NOTE]
+> :m: mandatory
 
 - [x] Write a program that multiplies two numbers.
 
@@ -51,7 +55,8 @@
 
 ### **:four:. To infinity and beyond**
 
-> [!NOTE] :m: mandatory
+> [!NOTE]
+> :m: mandatory
 
 - [x] Write a program that adds positive numbers.
 
@@ -65,7 +70,8 @@
 
 ### **:five:. Minimal Number of Coins for Change**
 
-> [!NOTE] :a: advanced
+> [!NOTE]
+> :a: advanced
 
 - [ ] Write a program that prints the minimum number of coins to make change for an amount of money.
 
