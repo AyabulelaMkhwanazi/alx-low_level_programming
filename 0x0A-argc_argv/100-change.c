@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int cents;
-	int coins;
+	int coins = 0;
 
 	int denominations[] = {25, 10, 5, 2, 1};
 
@@ -19,21 +19,18 @@ int main(int argc, char *argv[])
 	}
 
 	cents = atoi(argv[1]);
-	coins = 0;
 
-	if (cents <= 0)
+	if (cents > 0)
 	{
-		printf("0\n");
-		return (0);
-	}
-
-
-	int size = sizeof(denominations) / sizeof(int);
-
-	for (i = 0; i < size; i++)
-	{
-		coins += cents / denominations[i];
-		cents = cents % denominations[i];
+		coins = coins + cents / 25;
+		cents %= 25;
+		coins += cents / 10;
+		cents %= 10;
+		coins += cents / 5;
+		cents %= 5;
+		coins += cents / 2;
+		cents %= 2;
+		coins += cents;
 	}
 	printf("%d\n", coins);
 	return (0);
