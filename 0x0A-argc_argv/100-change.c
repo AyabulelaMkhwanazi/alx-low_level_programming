@@ -7,6 +7,10 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int cents;
+	int coins;
+
+	int denominations[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -14,8 +18,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int cents = atoi(argv[1]);
-	int coins = 0;
+	cents = atoi(argv[1]);
+	coins = 0;
 
 	if (cents <= 0)
 	{
@@ -23,7 +27,6 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	int denominations[] = {25, 10, 5, 2, 1};
 
 	int size = sizeof(denominations) / sizeof(int);
 
