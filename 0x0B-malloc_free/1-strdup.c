@@ -79,7 +79,6 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	_strncpy(new_str, str, length);
-
 	return (new_str);
 
 }
