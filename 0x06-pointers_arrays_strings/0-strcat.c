@@ -7,7 +7,6 @@
  * @src: second string
  * Return: concatenated string
  */
-
 char *_strcat(char *dest, char *src)
 {
 	int c = 0, b = 0;

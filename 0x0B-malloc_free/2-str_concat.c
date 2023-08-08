@@ -102,6 +102,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
+	if (s1 == NULL || s2 == NULL)
+	{
+		return (NULL);
+	}
 	_strncpy(new_str, s1, length1);
 	_strcat(new_str, s2);
 	return (new_str);
