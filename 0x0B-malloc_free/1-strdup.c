@@ -30,7 +30,7 @@ int _strlen(char *str)
  * @old_str: pointer to the source string
  * @size: the number of bytes to be copied from old_str to new_str
  *
- * Return: dest
+ * Return: the new string
  */
 char *_strncpy(char *new_str, char *old_str, int size)
 {
