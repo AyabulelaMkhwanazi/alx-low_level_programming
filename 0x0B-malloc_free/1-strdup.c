@@ -24,10 +24,12 @@ int _strlen(char *str)
 }
 
 /**
- * _strncpy - copies a string
+ * _strncpy - function copies a string
+ *
  * @new_str: pointer to the destination string
  * @old_str: pointer to the source string
  * @size: the number of bytes to be copied from old_str to new_str
+ *
  * Return: dest
  */
 char *_strncpy(char *new_str, char *old_str, int size)
@@ -51,8 +53,8 @@ char *_strncpy(char *new_str, char *old_str, int size)
 }
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory, which contains
- * a copy of the string given as a parameter.
+ * _strdup - returns a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter.
  *
  * @str: the string
  *
