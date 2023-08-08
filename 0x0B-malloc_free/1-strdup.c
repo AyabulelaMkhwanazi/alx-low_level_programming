@@ -58,7 +58,7 @@ char *_strncpy(char *new_str, char *old_str, int size)
  *
  * @str: the string
  *
- * Returns: a pointer to the duplicated string.
+ * Return: a pointer to the duplicated string
  */
 char *_strdup(char *str)
 {
