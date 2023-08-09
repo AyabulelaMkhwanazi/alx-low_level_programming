@@ -54,32 +54,6 @@ char *_strncpy(char *dest, char *src, int n)
 }
 
 /**
- * _strcat - contatenates two string
- *
- * @src: the first string
- * @dest: the second string
- *
- * Return: concatenated string
- */
-char *_strcat(char *dest, char *src)
-{
-	int c = 0, b = 0;
-
-	while (dest[c] != '\0')
-	{
-		c++;
-	}
-	while (src[b] != '\0')
-	{
-		dest[c] = src[b];
-		b++;
-		c++;
-	}
-
-	dest[c] = '\0';
-	return (dest);
-}
-/**
  * str_concat - concatenates two strings
  *
  * @s1: the first string
@@ -115,8 +89,9 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 != NULL)
 	{
-		_strcat(new_str, s2);
+		_strncpy(new_str + length1, s2, length2);
 	}
+	new_str[length1 + length2] = '\0';
 	return (new_str);
 
 }
