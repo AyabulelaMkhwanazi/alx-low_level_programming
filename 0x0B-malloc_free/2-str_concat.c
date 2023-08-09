@@ -24,33 +24,23 @@ int _strlen(char *str)
 }
 
 /**
- * _strncpy - copies a content of a string to another string
+ * _strcpy - copies a string pointed to by src
  *
- * @dest: pointer to new string (destination string)
- * @src: pointer to the old string (source string)
- * @n: number of bytes to be copied from s1 to dest
+ * @src: copy from
+ * @dest: copy to
  *
- * Return: copied string
+ * Return: copy
 */
-char *_strncpy(char *dest, char *src, int n)
+char *_strcpy(char *dest, char *src)
 {
 	int i;
 
-	if (src == NULL)
-	{
-		return (0);
-	}
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	for (i = 0; src[i] != 0; i++)
 	{
 		dest[i] = src[i];
 	}
-	do {
-		dest[i] = '\0';
-		i++;
-	} while (i < n);
-
+	dest[i] = '\0';
 	return (dest);
-
 }
 
 /**
@@ -85,12 +75,13 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 != NULL)
 	{
-		_strncpy(new_str, s1, length1);
+		_strcpy(new_str, s1);
 	}
 	if (s2 != NULL)
 	{
-		_strncpy(new_str + length1, s2, length2);
+		_strcpy(new_str + length1, s2);
 	}
+
 	new_str[length1 + length2] = '\0';
 	return (new_str);
 
