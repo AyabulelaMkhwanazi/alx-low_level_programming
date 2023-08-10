@@ -24,7 +24,7 @@
 - :file_folder: : `1-string_nconcat.c`
 
 
-### 2. _\\_calloc_
+### 2. \__calloc_
 
 - [ ] **Write a function that allocates memory for an array, using `malloc`.**
 
@@ -37,7 +37,7 @@
 - :file_folder: : `2-calloc.c`
 
 
-### 3. _array_\\_\\_range_
+### 3. _array_\__range_
 
 - [ ] **Write a function that creates an array of integers.**
 
@@ -49,7 +49,7 @@
 - :file_folder: : `3-array_range.c`
 
 
-### 4. \\_\_realloc_
+### 4. \__realloc_
 
 > [!NOTE]
 > <sup>ADVANCED</sup>
