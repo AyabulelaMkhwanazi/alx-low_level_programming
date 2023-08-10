@@ -11,7 +11,7 @@
 - :file_folder: : `0-malloc_checked.c`
 
 
-### 1. _string_\__\\_nconcat_
+### 1. _string_\__nconcat_
 
 - [ ] **Write a function that concatenates two strings.**
 
