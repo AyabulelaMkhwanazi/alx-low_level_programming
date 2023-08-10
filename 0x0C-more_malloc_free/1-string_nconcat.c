@@ -1,7 +1,6 @@
 #include "main.h"
 
 int _strlen(char *s);
-char *_strncpy(char *dest, char *src, int n);
 
 /**
  * string_nconcat - concatenates two strings
@@ -14,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n);
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr;
+	char *new_str;
 	unsigned int i;
 	unsigned int len1, len2;
 
@@ -42,24 +41,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = len2;
 	}
 
-	ptr = malloc(sizeof(char) * (len1 + len2 + 1));
+	new_str = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	if (ptr == NULL)
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
 
-	if (s1 != NULL)
+	for (i = 0; i < n; i++)
 	{
-		_strncpy(ptr, s1, len1);
+		new_str[i] = s1[i];
 	}
-	if (s2 != NULL)
+	for (i = 0; i < n; i++)
 	{
-		_strncpy(ptr + len1, s2, len2);
+		new_str[len1 + i] = s2[i];
 	}
 
-	ptr[len1 + len2] = '\0';
-	return (ptr);
+	new_str[len1 + len2] = '\0';
+	return (new_str);
 }
 
 /**
@@ -78,31 +77,4 @@ int _strlen(char *s)
 		length++;
 	}
 	return (length);
-}
-
-/**
- * _strncpy - copy a string
- * @dest: input value
- * @src: input value
- * @n: input value
- * Return: dest
- */
-
-char *_strncpy(char *dest, char *src, int n)
-{
-	int j;
-
-	j = 0;
-
-	while (j < n && src[j] != '\0')
-	{
-		dest[j] = src[j];
-		j++;
-	}
-	while (j < n)
-	{
-		dest[j] = '\0';
-		j++;
-	}
-	return (dest);
 }
