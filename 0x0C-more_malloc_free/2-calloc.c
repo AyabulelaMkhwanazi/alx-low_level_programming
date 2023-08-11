@@ -1,6 +1,6 @@
 #include "main.h"
 
-char *_memset(char *s, char b, unsigned int n);
+char *_memset(char *s, char c, unsigned int n);
 
 /**
  * _calloc - function allocates memory for an array, using malloc
@@ -26,7 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	_memset(array, 0, nmemb * size);
+	_memset(array, 0, size * nmemb);
 
 	return (array);
 }
