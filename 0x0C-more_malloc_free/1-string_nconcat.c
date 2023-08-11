@@ -1,6 +1,7 @@
 #include "main.h"
 
 int _strlen(char *s);
+char *_strncpy(char *dest, char *src, int n);
 
 /**
  * string_nconcat - concatenates two strings
@@ -40,23 +41,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = len2;
 	}
-
-	new_str = malloc(sizeof(char) * (len1 + n + 1));
+	else if (n < len2)
+	{
+		new_str = malloc(sizeof(char) * (len1 + n + 1));
+	}
 
 	if (new_str == NULL)
 	{
 		return (NULL);
 	}
 
-	for (j = 0; j < len1; j++)
-	{
-		new_str[j] = s1[j];
-	}
+	_strncpy(new_str, s1, len1);
 
-	for (index = 0; index < n; index++)
-	{
-		new_str[j + index] = s2[index];
-	}
+	_strncpy(new_str + len1, s2, n);
 
 	new_str[len1 + n] = '\0';
 	return (new_str);
@@ -78,4 +75,29 @@ int _strlen(char *s)
 		length++;
 	}
 	return (length);
+}
+
+/**
+ * _strncpy - function copies a string
+ *
+ * @dest: pointer to the destination string to copy to
+ * @src: pointer to the source string to copy from
+ * @n: number of bytes to copy from src
+ *
+ * Return: pointer to the destination string
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

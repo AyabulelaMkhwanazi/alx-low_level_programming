@@ -2,7 +2,7 @@
 
 ### 0. _Trust no one_
 
-- [ ] **Write a function that allocates memory using `malloc`.**
+- [x] **Write a function that allocates memory using `malloc`.**
 
 - Prototype: `coid *malloc_checked(unsigned int b);`
 - Returns a pointer to the allocated memory
@@ -39,7 +39,7 @@
 
 ### 3. _array_\__range_
 
-- [ ] **Write a function that creates an array of integers.**
+- [x] **Write a function that creates an array of integers.**
 
 - Prototype: `int *array_range(int min, int max);`
 - The array created should contain all the values from `min` (included) to `max` (included), ordered from `min` to `max`
