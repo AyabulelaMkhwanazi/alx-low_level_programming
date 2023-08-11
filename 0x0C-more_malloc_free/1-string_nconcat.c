@@ -11,11 +11,10 @@ char *_strncpy(char *dest, char *src, int n);
  * @n: the number of bytes
  *
  * Return: NULL if malloc fails
-*/
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *new_str;
-	unsigned int index, j;
 	unsigned int len1, len2;
 
 	if (s1 == NULL)
@@ -64,7 +63,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  * @s: the string
  *
  * Return: the length of the string
-*/
+ */
 int _strlen(char *s)
 {
 	int length;
