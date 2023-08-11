@@ -1,7 +1,7 @@
 #include "main.h"
 
 int _strlen(char *s);
-char *_strncpy(char *dest, char *src, int n);
+char *_strcpy(char *dest, char *src);
 
 /**
  * string_nconcat - concatenates two strings
@@ -47,11 +47,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	_strncpy(new_str, s1, len1);
+	_strcpy(new_str, s1);
 
-	_strncpy(new_str + len1, s2, n);
+	_strcpy(new_str + len1, s2);
 
 	new_str[len1 + n] = '\0';
+
 	return (new_str);
 }
 
@@ -74,26 +75,22 @@ int _strlen(char *s)
 }
 
 /**
- * _strncpy - function copies a string
+ * _strcpy - function copies a string
  *
  * @dest: pointer to the destination string to copy to
  * @src: pointer to the source string to copy from
- * @n: number of bytes to copy from src
  *
  * Return: pointer to the destination string
  */
-char *_strncpy(char *dest, char *src, int n)
+char *_strcpy(char *dest, char *src)
 {
 	int i;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	for (i = 0; src[i] != '\0'; i++)
 	{
 		dest[i] = src[i];
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
+	dest[i] = '\0';
+
 	return (dest);
 }
