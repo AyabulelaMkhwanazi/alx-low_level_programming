@@ -22,17 +22,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-
-	if (s1 != NULL)
+	else
 	{
 		len1 = _strlen(s1);
 	}
 
-	if (s2 != NULL)
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	else
 	{
 		len2 = _strlen(s2);
 	}
