@@ -11,7 +11,7 @@ char *_memcpy(char *dest, char *src, unsigned int n);
  * @old_size: the size, in bytes, of the allocated space for ptr
  * @new_size: the size, in bytes, of the new memory block
  *
- * Return:
+ * Return: pointer to new allocated memory
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
