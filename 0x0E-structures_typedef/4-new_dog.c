@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *_strcpy(char *dest, char *src);
-char *_strlen(char *str);
+int _strlen(char *str);
 
 /**
  * new_dog - function creates a new dog.
@@ -29,24 +29,24 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	d->name = malloc(sizeof(char) * (length1 + 1));
-	if (d->name == NULL)
+	dog->name = malloc(sizeof(char) * (length1 + 1));
+	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 
-	d->owner = malloc(sizeof(char) * (length2 + 1));
-	if (d->owner == NULL)
+	dog->owner = malloc(sizeof(char) * (length2 + 1));
+	if (dog->owner == NULL)
 	{
 		free(dog);
-		free(d->name);
+		free(dog->name);
 		return (NULL);
 	}
-	d->age = age;
+	dog->age = age;
 
-	_strcpy(d->name, name);
-	_strcpy(d->owner, owner);
+	_strcpy(dog->name, name);
+	_strcpy(dog->owner, owner);
 
 	return (dog);
 }
@@ -58,7 +58,7 @@ dog_t *new_dog(char *name, float age, char *owner)
  *
  * Return: length of the string
  */
-int *_strlen(char *str)
+int _strlen(char *str)
 {
 	int length = 0;
 
