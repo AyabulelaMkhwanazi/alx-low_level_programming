@@ -36,6 +36,10 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < size; i++)
 	{
+		if (i == size - 1)
+		{
+			printf("%02x ", ptr[i]);
+		}
 		printf("%02hx ", *(ptr + i) & 0xff);
 	}
 	printf("\n");
