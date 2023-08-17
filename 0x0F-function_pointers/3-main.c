@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
 {
 	int n1, n2;
 	char *op;
-	int i;
 
 	if (argc != 4)
 	{
@@ -33,7 +32,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((*op == '/' && n2 == 0) || *op == '%' && n2 == 0)
+	if ((*op == '/' && n2 == 0) || (*op == '%' && n2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
