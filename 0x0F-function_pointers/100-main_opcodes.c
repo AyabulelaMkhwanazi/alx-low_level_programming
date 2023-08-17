@@ -38,9 +38,10 @@ int main(int argc, char *argv[])
 	{
 		if (i == size - 1)
 		{
-			printf("%02x ", ptr[i]);
+			printf("%02hhx ", ptr[i]);
+			break;
 		}
-		printf("%02hx ", *(ptr + i) & 0xff);
+		printf("%02hhx ", *(ptr + i));
 	}
 	printf("\n");
 	return (0);
