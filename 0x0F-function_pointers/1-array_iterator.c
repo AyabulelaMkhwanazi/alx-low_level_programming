@@ -2,16 +2,6 @@
 #include <stdio.h>
 
 /**
- * action - function executes a function
- *
- * Return: nothing.
- */
-void action(int a)
-{
-	action(a);
-}
-
-/**
  * array_iterator - function executes a function given as a parameter
  * on each element of an array
  *
