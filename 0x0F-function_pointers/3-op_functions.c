@@ -53,5 +53,35 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - function returns the r
-*/
+ * op_div - function returns the devision of a and b
+ *
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: division
+ */
+int op_div(int a, int b)
+{
+	int div;
+
+	div = a / b;
+
+	return (div);
+}
+
+/**
+ * op_mod - function returns the remainder of the division of a by b
+ *
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: remainder
+ */
+int op_mod(int a, int b)
+{
+	int rem;
+
+	rem = a % b;
+
+	return (rem);
+}
