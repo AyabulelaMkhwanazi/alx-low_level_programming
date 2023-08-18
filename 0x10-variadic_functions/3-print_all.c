@@ -1,52 +1,51 @@
 #include "variadic_functions.h"
 
 /**
- * print_func - struct print_func
- *
- * @type: type character for the function
- * @func: pointer to function to execute/print the type
- */
-typedef struct print_func
-{
-	char type;
-	void (*func)(va_list);
-} print_func_t;
-
-/**
  * print_char - function prints char types
+ *
+ * @args: va_list name
  *
  * Return: nothing.
  */
 void print_char(va_list args)
 {
 	char c = va_arg(args, int);
+
 	printf("%c", c);
 }
 
 /**
  * print_int - function prints int types
  *
+ * @args: va_list name
+ *
  * Return: nothing.
  */
 void print_int(va_list args)
 {
 	int i = va_arg(args, int);
+
 	printf("%d", i);
 }
 
 /**
  * print_flt - function prints float types
  *
+ * @args: va_list name
+ *
  * Return: nothing
  */
 void print_flt(va_list args)
 {
 	float f = va_arg(args, double);
+
 	printf("%f", f);
 }
 
 /**
  * print_str - function prints strings
+ *
+ * @args: va_list name;
  *
  * Return: nothing.
  */
