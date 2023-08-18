@@ -74,8 +74,8 @@ void print_str(va_list args)
 void print_all(const char * const format, ...)
 {
 	va_list args;
-
-	va_start(args, format);
+	
+	char *separator = " ";
 
 	print_func_t print_funcs[] = {
 		{'c', print_char},
@@ -85,7 +85,8 @@ void print_all(const char * const format, ...)
 	};
 	int i = 0;
 	int j;
-	char *separator = " ";
+
+	va_start(args, format);
 
 	while (format[i])
 	{
