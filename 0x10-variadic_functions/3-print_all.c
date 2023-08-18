@@ -1,107 +1,59 @@
 #include "variadic_functions.h"
 
 /**
- * print_char - function prints char types
- *
- * @args: va_list name
- *
- * Return: nothing.
- */
-void print_char(va_list args)
-{
-	char c = va_arg(args, int);
-
-	printf("%c", c);
-}
-
-/**
- * print_int - function prints int types
- *
- * @args: va_list name
- *
- * Return: nothing.
- */
-void print_int(va_list args)
-{
-	int i = va_arg(args, int);
-
-	printf("%d", i);
-}
-
-/**
- * print_flt - function prints float types
- *
- * @args: va_list name
- *
- * Return: nothing
- */
-void print_flt(va_list args)
-{
-	float f = va_arg(args, double);
-
-	printf("%f", f);
-}
-
-/**
- * print_str - function prints strings
- *
- * @args: va_list name;
- *
- * Return: nothing.
- */
-void print_str(va_list args)
-{
-	char *s = va_arg(args, char *);
-
-	if (s == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-
-	printf("%s", s);
-}
-
-/**
  * print_all - function prints anything
  *
- * @format: the list of types of arguments passed to the function
+ * @format: pointer to the constant argument types
+ * passed to the function
  *
  * Return: nothing.
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
+	va_list all;
 
-	char *separator = " ";
-
-	print_func_t print_funcs[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_flt},
-		{'s', print_str},
-	};
 	int i = 0;
-	int j;
+	char *s;
+	char *separator = "";
 
-	va_start(args, format);
+	va_start(all, format);
 
-	while (format && format[i])
+	if (format != NULL)
 	{
-		j = 0;
-		while (j < 4)
+		while (format[i])
 		{
-			if (format[i] == print_funcs[j].type)
+			switch (format[i])
 			{
-				printf("%s", separator);
+				case 'c':
+						printf("%s%c", separator, va_arg(all, int));
+						break;
 
-				print_funcs[j].func(args);
-				separator = ", ";
+				case 'i':
+						printf("%s%d", separator, va_arg(all, int));
+						break;
+
+				case 'f':
+						printf("%s%f", separator, va_arg(all, double));
+						break;
+
+				case 's':
+						s = va_arg(all, char *);
+
+						if (s == NULL)
+						{
+							printf("(nil)");
+						}
+						printf("%s%s", separator, s);
+						break;
+
+				default:
+				i++;
+						continue;
 			}
-			j++;
+			separator = ", ";
+			i++;
 		}
-		i++;
 	}
-	va_end(args);
 	printf("\n");
+	va_end(all);
 }
