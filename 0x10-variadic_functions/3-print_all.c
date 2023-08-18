@@ -57,7 +57,7 @@ void print_str(va_list args)
 	{
 		printf("(nil)");
 	}
-	
+
 	printf("%s", s);
 }
 
@@ -82,6 +82,12 @@ void print_all(const char * const format, ...)
 	};
 	int i = 0;
 	int j;
+
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 
 	va_start(args, format);
 
