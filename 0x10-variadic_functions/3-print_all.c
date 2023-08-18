@@ -83,15 +83,9 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	int j;
 
-	if (format == NULL)
-	{
-		printf("\n");
-		return;
-	}
-
 	va_start(args, format);
 
-	while (format[i])
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
