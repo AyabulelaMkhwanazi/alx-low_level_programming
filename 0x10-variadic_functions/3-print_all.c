@@ -74,7 +74,7 @@ void print_str(va_list args)
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	
+
 	char *separator = " ";
 
 	print_func_t print_funcs[] = {
@@ -90,7 +90,8 @@ void print_all(const char * const format, ...)
 
 	while (format[i])
 	{
-		for (j = 0; j < 4; j++)
+		j = 0;
+		while (j < 4)
 		{
 			if (format[i] == print_funcs[j].type)
 			{
@@ -99,6 +100,7 @@ void print_all(const char * const format, ...)
 				print_funcs[j].func(args);
 				separator = ", ";
 			}
+			j++;
 		}
 		i++;
 	}
