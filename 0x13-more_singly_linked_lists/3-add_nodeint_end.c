@@ -5,6 +5,7 @@
  * of a listint_t list.
  *
  * @head: pointer to a pointer to the listint_t list.
+ * @n: integer to add.
  *
  * Return: the new node.
  */
