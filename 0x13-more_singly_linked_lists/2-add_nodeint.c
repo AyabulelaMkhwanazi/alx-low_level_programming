@@ -4,7 +4,8 @@
  * add_nodeint - function adds a new node at the beginning
  * of a listint_t list.
  *
- * @head: pointer to pointer to the first node (head) of listint_t list.
+ * @head: pointer to a pointer to listint_t list.
+ * @n: integer to add.
  *
  * Return: new node.
  */

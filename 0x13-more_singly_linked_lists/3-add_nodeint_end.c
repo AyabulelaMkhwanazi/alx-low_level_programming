@@ -4,7 +4,7 @@
  * add_nodeint_end - function adds a new node at the end
  * of a listint_t list.
  *
- * @head: pointer to pointer to the listint_t list.
+ * @head: pointer to a pointer to the listint_t list.
  *
  * Return: the new node.
  */
