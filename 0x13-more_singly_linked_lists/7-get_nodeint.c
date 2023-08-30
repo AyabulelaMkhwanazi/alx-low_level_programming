@@ -4,7 +4,7 @@
  * get_nodint_at_index - function returns the nth node of a
  * listint_t linked list.
  *
- * Description: function returns the nth node of a listint_t
+ * Description - function returns the nth node of a listint_t
  * linked list.
  *
  * @head: pointer to the first node of listint_t list.
