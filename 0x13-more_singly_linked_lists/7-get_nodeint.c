@@ -4,6 +4,9 @@
  * get_nodint_at_index - function returns the nth node of a
  * listint_t linked list.
  *
+ * Descriptio: function returns the nth node of a listint_t
+ * linked list.
+ *
  * @head: pointer to the first node of listint_t list.
  * @index: the index of the node, starting at 0.
  *
@@ -18,6 +21,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	while (ptr != NULL && i < index)
 	{
+		if (i == index)
+		{
+			return (ptr);
+		}
 		ptr = ptr->next;
 		i++;
 	}
