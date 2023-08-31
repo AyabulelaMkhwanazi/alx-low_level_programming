@@ -30,7 +30,6 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else if (b[length - i - 1] != '0' && b[length - i - 1] != '1')
 		{
-			integer = 0;
 			return (0);
 			break;
 		}
