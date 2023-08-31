@@ -12,8 +12,8 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int length = _strlen(b);
-	unsigned int i;
+	int length = _strlen(b);
+	int i;
 	unsigned int integer = 0;
 
 	if (b == NULL)
