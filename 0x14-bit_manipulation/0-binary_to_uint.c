@@ -24,14 +24,14 @@ unsigned int binary_to_uint(const char *b)
 	{
 		num = num << 1;
 
-		if (b[i] < '0' && b[i] > '1')
-		{
-			return (0);
-		}
-
 		if (b[i] == '1')
 		{
 			num = num | 1;
+		}
+
+		if (b[i] != '0' && b[i] != '1')
+		{
+			return (0);
 		}
 	}
 	return (num);
