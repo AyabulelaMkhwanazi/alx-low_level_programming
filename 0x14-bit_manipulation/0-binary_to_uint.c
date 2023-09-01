@@ -12,46 +12,27 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	int length = _strlen(b);
+	unsigned int num = 0;
 	int i;
-	unsigned int integer = 0;
 
-	if (b == NULL)
+	if (b == 0)
 	{
 		return (0);
 	}
 
-	for (i = 0; i < length; i++)
+	for (i = 0; b[i] != '\0'; i++)
 	{
+		num = num << 1;
 
-		if (b[length - i - 1] == '1')
-		{
-			integer += 1 << i;
-		}
-		else if (b[length - i - 1] != '0' && b[length - i - 1] != '1')
+		if (b[i] < '0' && b[i] > '1')
 		{
 			return (0);
 		}
+
+		if (b[i] == '1')
+		{
+			num = num | 1;
+		}
 	}
-	return (integer);
-}
-
-
-/**
- * _strlen - returns the length of a string
- *
- * @s: pointer to the string
- *
- * Return: length
-*/
-int _strlen(const char *s)
-{
-	int length = 0;
-
-	while (*(s + length) != '\0')
-	{
-		length++;
-	}
-
-	return (length);
+	return (num);
 }
