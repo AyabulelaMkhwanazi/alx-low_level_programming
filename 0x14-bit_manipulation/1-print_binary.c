@@ -7,15 +7,15 @@
 */
 void print_binary(unsigned int n)
 {
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-	else
-	{
-		print_binary(n >> 1);
-		_putchar((n & 1) ? '1' : '0');
-	}
+	unsigned int mask = 1 << (sizeof(unsigned int) * 8 - 1);
 
+    while (mask > 0) {
+        if ((n & mask) == 0) {
+            _putchar('0');
+        } else {
+            _putchar('1');
+        }
+
+        mask >>= 1;
+    }
 }
