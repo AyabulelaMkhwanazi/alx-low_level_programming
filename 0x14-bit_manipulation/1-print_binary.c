@@ -7,15 +7,26 @@
 */
 void print_binary(unsigned int n)
 {
-	unsigned int mask = 1 << (sizeof(unsigned int) * 8 - 1);
+	char nums;
+	int i;
+	int bits = sizeof(unsigned int) * 8;
+	int one = 0;
 
-    while (mask > 0) {
-        if ((n & mask) == 0) {
-            _putchar('0');
-        } else {
-            _putchar('1');
-        }
+	for(i = bits - 1; i >= 0; i--)
+	{
+		nums = (n >> i) & 1;
 
-        mask >>= 1;
-    }
+		if (nums == 1)
+		{
+			one = 1;
+		}
+		if (one)
+		{
+			_putchar(nums + '0');
+		}
+	}
+	if (!one)
+	{
+		_putchar('0');
+	}
 }
