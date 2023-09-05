@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
 		if (nwrite == -1 || file_to == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			return (-1);
 			exit(99);
 		}
 		nread = read(file_from, buffer, BUFFER_SIZE);
@@ -46,13 +45,11 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Can't close fd %d\n", file_from);
 		exit(100);
-		return (-1);
 	}
 	if (close(file_to) == -1)
 	{
 		dprintf(STDERR_FILENO, "Can't close fd %d\n", file_to);
 		exit(100);
-		return (-1);
 	}
 	return (0);
 }
