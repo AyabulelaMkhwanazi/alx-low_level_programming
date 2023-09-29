@@ -9,7 +9,7 @@
 */
 void print_binary(unsigned long int n)
 {
-	static int flag = 0;
+	static int flag;
 	unsigned long int bin;
 
 	if (n == 0 && flag == 0)
