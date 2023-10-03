@@ -1,4 +1,4 @@
-vCC = gcc
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -g
 TARGET = a
 SRCS = $(wildcard 1*.c)
