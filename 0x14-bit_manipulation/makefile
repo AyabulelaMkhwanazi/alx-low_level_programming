@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -g
-TARGET = a
-SRCS = $(wildcard *0*.c)
+TARGET = b
+SRCS = $(wildcard *1*.c)
 OBJS = $(SRCS:.c=.o)
 DEPS = $(OBJS:.o=.d)
 
