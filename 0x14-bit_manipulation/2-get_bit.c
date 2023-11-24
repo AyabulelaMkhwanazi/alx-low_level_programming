@@ -7,9 +7,9 @@
  * @index: the index in which to get the bit from.
  *
  * Return: the value of the bit at index or -1 if
- * 	an error occured.
+ * an error occured.
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	return (n >> index) & 1;
+	return ((n >> index) & 1);
 }
