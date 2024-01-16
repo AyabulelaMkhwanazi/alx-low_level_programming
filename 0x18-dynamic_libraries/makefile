@@ -18,7 +18,7 @@ $(TARGET): $(OBJS)
 all: $(TARGET)
 
 clean:
-	rm -f $(OBJS) $(DEPS) $(TARGET)
+	rm -f $(OBJS) $(DEPS)
 
 git:
 	@read -p "Enter commit message: " message; \
