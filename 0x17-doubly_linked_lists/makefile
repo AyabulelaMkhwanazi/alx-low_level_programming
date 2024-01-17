@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -g
 TARGET = a
-SCRIPT = 0-main.c
-FILE = 0-print_dlistint.c
+SCRIPT = 1-main.c
+FILE = 1-dlistint_len.c
 
 $(TARGET): $(SCRIPT) $(FILE)
 		$(CC) $(CFLAGS) -o $@ $^

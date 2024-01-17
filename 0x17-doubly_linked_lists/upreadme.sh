@@ -15,7 +15,7 @@ if [ ! -f README.md ]; then
     echo "## Tasks" >> README.md
     echo "" >> README.md
     echo "> [!IMPORTANT]" >> README.md
-    echo "> Files are compiled using the following GCC flags:" >> README.md
+    echo "> Compile test files with their corresponding main files (e.g 0-test.c 0-main.c) using the following GCC flags:" >> README.md
     echo "" >> README.md
     echo "\`gcc -Wall -Werror -Wextra -pedantic -std=gnu89\`" >> README.md
 fi

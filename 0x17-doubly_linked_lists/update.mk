@@ -33,13 +33,15 @@ update_makefile:
 		sed -i 's|SCRIPT = .*|SCRIPT = $(MAIN_FILE)|' $(TARGET_MAKEFILE); \
 	fi
 	@sed -i 's|FILE = .*|FILE = $(TEST_FILES)|' $(TARGET_MAKEFILE)
+
+update_header:
 	@if [ -n "$(HEADER_FILE)" ] && [ -n "$(TEST_FILES)" ]; then \
 		echo "Updating $(HEADER_FILE)..."; \
 		for file in $(TEST_FILES); do \
 			echo "Processing $$file"; \
 			prototype=$$(cproto $$file); \
 			if ! grep -Fxq "$$prototype" $(HEADER_FILE); then \
-				sed -i "/#endif/i $$prototype" $(HEADER_FILE); \
+				awk -v n="$$prototype" '/#endif/{print n; print; next} 1' $(HEADER_FILE) > $(TEMP_FILE) && mv $(TEMP_FILE) $(HEADER_FILE); \
 			fi; \
 		done; \
 	fi
