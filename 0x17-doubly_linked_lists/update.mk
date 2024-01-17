@@ -24,6 +24,8 @@ endif
 TEMP_FILE := temp.h
 
 .PHONY: update_makefile
+
+# Updtes the target makefile.
 update_makefile:
 	@echo "Updating $(TARGET_MAKEFILE)..."
 	@if [ "$(MAIN_FILE)" = "$(OLD_MAIN_FILE)" ]; then \
@@ -34,6 +36,7 @@ update_makefile:
 	fi
 	@sed -i 's|FILE = .*|FILE = $(TEST_FILES)|' $(TARGET_MAKEFILE)
 
+# Updates the header file.
 update_header:
 	@if [ -n "$(HEADER_FILE)" ] && [ -n "$(TEST_FILES)" ]; then \
 		echo "Updating $(HEADER_FILE)..."; \
@@ -41,14 +44,15 @@ update_header:
 			echo "Processing $$file"; \
 			prototype=$$(cproto $$file); \
 			if ! grep -Fxq "$$prototype" $(HEADER_FILE); then \
-				awk -v n="$$prototype" '/#endif/{print n; print; next} 1' $(HEADER_FILE) > $(TEMP_FILE) && mv $(TEMP_FILE) $(HEADER_FILE); \
+				awk -v n="$$prototype" '/#endif/{print n; print "\n"; print; next} 1' $(HEADER_FILE) > $(TEMP_FILE) && mv $(TEMP_FILE) $(HEADER_FILE); \
 			fi; \
 		done; \
 	fi
 
+# Updates the README file.
 update_readme:
 	@if [ -n "$(README_SH)" ]; then \
 		chmod u+x $(README_SH); \
-		echo "Updating $(README_SH)..."; \
+		echo "Running $(README_SH)..."; \
 		./$(README_SH); \
 	fi

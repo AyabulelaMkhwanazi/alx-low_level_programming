@@ -1,13 +1,20 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -g
 TARGET = a
-SCRIPT = 1-main.c
-FILE = 1-dlistint_len.c
+SCRIPT = 2-main.c
+FILE = 2-add_dnodeint.c
+COMPILE_SCRIPT = compile.sh
+GCC_FILES = $(shell bash $(COMPILE_SCRIPT))
+LATEST_MAIN = $(shell ls -t *-main.c | head -n 1)
 
-$(TARGET): $(SCRIPT) $(FILE)
+compile:
+		@chmod u+x $(COMPILE_SCRIPT)
+		./$(COMPILE_SCRIPT)
+
+$(TARGET): $(LATEST_MAIN) $(GCC_FILES)
 		$(CC) $(CFLAGS) -o $@ $^
 
-.PHONY: all test git style
+.PHONY: all test git style compile
 
 all: test count style
 

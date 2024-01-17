@@ -18,3 +18,7 @@
 - **1. List length.**
 
    - :file_folder: : `1-dlistint_len.c`: Function returns the number of elements in a linked `dlistint_t` list.
+
+- **2. Add node.**
+
+   - :file_folder: : `2-add_dnodeint.c`: Function adds a new node at the beginning of a `dlistint_t` list.
