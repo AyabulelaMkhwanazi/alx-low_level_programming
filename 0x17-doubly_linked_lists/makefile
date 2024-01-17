@@ -32,12 +32,10 @@ count:
 		@echo
 		@echo "Line count:"
 		@wc -l $(FILE)
-		@sleep 1
 		@echo
 
 style:
 		@echo "Checking $(FILE) for style errors..."
-		@sleep 2
 		@bash -c '\
 		OUTPUT=$$(betty $(FILE)); \
 		if [ -n "$$OUTPUT" ]; then \
