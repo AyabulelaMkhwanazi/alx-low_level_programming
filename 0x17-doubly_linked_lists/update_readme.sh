@@ -37,6 +37,7 @@ while true; do
     echo "- **$task_num.**" >> README.md
     echo "" >> README.md
     echo "   - :file_folder: : \`$file_name\`: $desc" >> README.md
+	echo "$task_num" > .commit_msg
     while true; do
 		echo ""
         echo "Do you still want to update the README file again? (yes/no)"

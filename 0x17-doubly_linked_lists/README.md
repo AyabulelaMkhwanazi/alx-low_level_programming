@@ -42,3 +42,7 @@
 - **7. Insert at index.**
 
    - :file_folder: : `7-insert_dnodeint.c`: Function inserts a new node at a given position.
+
+- **8. Delete at index.**
+
+   - :file_folder: : `8-delete_dnodeint.c`: Function deletes the node at index `index` of a `dlistint_t` linked list.
