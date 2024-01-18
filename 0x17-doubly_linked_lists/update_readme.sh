@@ -27,8 +27,10 @@ while true; do
     if [ "$task_num" = "q" ]; then
         break
     fi
+	echo ""
     echo "What's the file name for task $task_num:"
     read file_name
+	echo ""
     echo "Enter a short description for the functions in $file_name:"
     read desc
     echo "" >> README.md
@@ -36,6 +38,7 @@ while true; do
     echo "" >> README.md
     echo "   - :file_folder: : \`$file_name\`: $desc" >> README.md
     while true; do
+		echo ""
         echo "Do you still want to update the README file again? (yes/no)"
         read answer
         if [ "$answer" = "yes" ]; then

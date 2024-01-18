@@ -34,3 +34,7 @@
 - **5. Get node at index.**
 
    - :file_folder: : `5-get_dnodeint.c`: Function returns the nth node of a `dlistint_t` linked list.
+
+- **6. Sum list.**
+
+   - :file_folder: : `6-sum_dlistint.c`: Function returns the sum of all the data(n) of a `dlistint_t` linked list.
