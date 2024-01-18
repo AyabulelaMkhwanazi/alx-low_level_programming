@@ -13,6 +13,7 @@ gcc_files=$latest_main
 for func in $functions; do
     # Find the file that defines the function (excluding all *-main.c files except the latest one)
     file=$(grep -l "$func" *.c | grep -v -E '.*-main\.c' | grep -v $latest_main)
-    # Add the file to the compile command
+
+    # Print the name of the file that defines it
     echo $file
 done

@@ -22,3 +22,7 @@
 - **2. Add node.**
 
    - :file_folder: : `2-add_dnodeint.c`: Function adds a new node at the beginning of a `dlistint_t` list.
+
+- **3. Add node at the end.**
+
+   - :file_folder: : `3-add_dnodeint_end.c`: Function adds a new node at the end of a `dlistint_t` list.

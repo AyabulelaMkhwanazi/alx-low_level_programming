@@ -16,7 +16,7 @@ ifeq ($(HEADER_FILE),)
 endif
 
 # Check for a .sh file in the directory
-README_SH := $(shell ls *.sh 2> /dev/null)
+README_SH := $(shell ls update_readme.sh 2> /dev/null)
 ifeq ($(README_SH),)
     $(warning No .sh file found)
 endif
