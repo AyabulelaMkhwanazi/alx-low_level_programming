@@ -3,8 +3,8 @@ include update.mk
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -g
 TARGET = a
-SCRIPT = 6-main.c
-FILE = 6-sum_dlistint.c
+SCRIPT = 7-main.c
+FILE = 7-insert_dnodeint.c 
 COMPILE_SHELL = compile.sh
 GCC_FILES = $(shell bash $(COMPILE_SHELL))
 LATEST_MAIN = $(shell ls -t *-main.c | head -n 1)

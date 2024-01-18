@@ -38,3 +38,7 @@
 - **6. Sum list.**
 
    - :file_folder: : `6-sum_dlistint.c`: Function returns the sum of all the data(n) of a `dlistint_t` linked list.
+
+- **7. Insert at index.**
+
+   - :file_folder: : `7-insert_dnodeint.c`: Function inserts a new node at a given position.
