@@ -26,3 +26,7 @@
 - **3. Add node at the end.**
 
    - :file_folder: : `3-add_dnodeint_end.c`: Function adds a new node at the end of a `dlistint_t` list.
+
+- **4. Free list.**
+
+   - :file_folder: : `4-free_dlistint.c`: Function fress a `dlistint_t` list.

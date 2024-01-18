@@ -1,15 +1,15 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -g
 TARGET = a
-SCRIPT = 3-main.c
-FILE = 3-add_dnodeint_end.c
-COMPILE_SCRIPT = compile.sh
-GCC_FILES = $(shell bash $(COMPILE_SCRIPT))
+SCRIPT = 4-main.c
+FILE = 4-free_dlistint.c
+COMPILE_SHELL = compile.sh
+GCC_FILES = $(shell bash $(COMPILE_SHELL))
 LATEST_MAIN = $(shell ls -t *-main.c | head -n 1)
 
 compile:
-		@chmod u+x $(COMPILE_SCRIPT)
-		./$(COMPILE_SCRIPT)
+		@chmod u+x $(COMPILE_SHELL)
+		./$(COMPILE_SHELL)
 
 $(TARGET): $(LATEST_MAIN) $(GCC_FILES)
 		$(CC) $(CFLAGS) -o $@ $^
@@ -22,7 +22,7 @@ test: $(TARGET)
 		@echo
 		@echo "Running $(TARGET)..."
 		@sleep 1
-		@./$(TARGET)
+		@ valgrind ./$(TARGET)
 		@echo
 
 git:
