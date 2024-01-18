@@ -30,3 +30,7 @@
 - **4. Free list.**
 
    - :file_folder: : `4-free_dlistint.c`: Function fress a `dlistint_t` list.
+
+- **5. Get node at index.**
+
+   - :file_folder: : `5-get_dnodeint.c`: Function returns the nth node of a `dlistint_t` linked list.

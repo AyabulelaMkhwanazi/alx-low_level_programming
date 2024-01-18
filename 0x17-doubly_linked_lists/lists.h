@@ -37,4 +37,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 void free_dlistint(dlistint_t *head);
 
 
+/* 5-get_dnodeint.c */
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
+
+
 #endif

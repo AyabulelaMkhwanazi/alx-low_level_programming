@@ -1,8 +1,10 @@
+include update.mk
+
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -g
 TARGET = a
-SCRIPT = 4-main.c
-FILE = 4-free_dlistint.c
+SCRIPT = 5-main.c
+FILE = 5-get_dnodeint.c
 COMPILE_SHELL = compile.sh
 GCC_FILES = $(shell bash $(COMPILE_SHELL))
 LATEST_MAIN = $(shell ls -t *-main.c | head -n 1)
@@ -22,7 +24,7 @@ test: $(TARGET)
 		@echo
 		@echo "Running $(TARGET)..."
 		@sleep 1
-		@ valgrind ./$(TARGET)
+		@./$(TARGET)
 		@echo
 
 git:
