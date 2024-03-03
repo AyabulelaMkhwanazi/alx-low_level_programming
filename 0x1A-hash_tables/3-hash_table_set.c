@@ -45,19 +45,41 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current_node = current_node->next;
 	}
 	/* if no node exists with the same key, create a new node */
-	new_node = allocate_memory(sizeof(hash_node_t));
+	new_node = create_new_node(key, value);
 	if (new_node == NULL)
 	{
 		return (0);
 	}
 
 	/* initialize the new node */
-	new_node->key = strdup(key);
-	new_node->value = strdup(value);
 	new_node->next = ht->array[index];
 
 	/* add the new node to the hash table */
 	ht->array[index] = new_node;
 
 	return (1);
+}
+
+/**
+ * create_new_node - create a new node for the hash table.
+ *
+ * @key: the key.
+ * @value: the value associated with the key.
+ *
+ * Return: a pointer to the new node, or NULL if it fails.
+*/
+hash_node_t *create_new_node(const char *key, const char *value)
+{
+	hash_node_t *new_node;
+
+	new_node = allocate_memory(sizeof(hash_node_t));
+	if (new_node == NULL)
+	{
+		return (NULL);
+	}
+
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+
+	return (new_node);
 }
