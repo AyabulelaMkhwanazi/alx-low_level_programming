@@ -54,11 +54,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 */
 void *allocate_memory(size_t size)
 {
-    void *ptr = malloc(size);
-    if (ptr == NULL)
-    {
-        printf("Memory allocation failed.\n");
-        return NULL;
-    }
-    return ptr;
+	void *ptr = malloc(size);
+
+	if (ptr == NULL)
+	{
+		printf("Memory allocation failed.\n");
+		return (NULL);
+	}
+	return (ptr);
 }
