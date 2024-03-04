@@ -107,10 +107,8 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-
 	/* compute the index in the hash table where the key/value pair should  be */
 	index = key_index((const unsigned char *)key, ht->size);
-
 	/* check if a node already exists with the same value */
 	node = ht->array[index];
 	while (node != NULL)
@@ -124,24 +122,20 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		}
 		node = node->next;
 	}
-
 	/* if no node exists with the same key, create a new node */
 	new_node = allocate_memory(sizeof(shash_node_t));
 	if (new_node == NULL)
 	{
 		return (0);
 	}
-
 	/* initialize the new node */
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	new_node->next = ht->array[index];
 	new_node->sprev = NULL;
 	new_node->snext = NULL;
-
 	/* add the new node to the hash table */
 	ht->array[index] = new_node;
-
 	/* insert the new node into the sorted linked list */
 	insert_sorted(ht, new_node);
 
@@ -176,7 +170,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 		if (strcmp(node->key, key) == 0)
 		{
 			/* If a node with the same key is found, return its value */
-			return node->value;
+			return (node->value);
 		}
 	}
 
@@ -189,7 +183,8 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  *
  * @ht: The sorted hash table to print.
  *
- * This function prints each key/value pair in the sorted hash table in the order
+ * This function prints each key/value pair in the sorted hash table in the
+ * order
  * they appear in the sorted linked list. If the hash table is NULL,
  * it doesn't print anything.
  */
